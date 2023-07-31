@@ -109,7 +109,7 @@ func ReadLines(sc *bufio.Scanner, sep string, handler func(int, []string) bool) 
 			fields = append(fields, builder.String())
 			builder.Reset()
 			if !handler(lineCount, fields) {
-				return nil
+				///// fmt.Errorf('something went wrong')
 			}
 			fields = []string{}
 		}
